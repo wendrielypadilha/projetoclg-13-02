@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Receitas Deliciosas - Login</title>
+    <link rel="stylesheet" href="stylelogin.css">
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo ao site de Receitas Deliciosas!</h1>
+    </header>
+
+    <main>
+        <section class="login-container">
+            <h2>Login</h2>
+            <input type="text" id="username" placeholder="Usuário">
+            <input type="password" id="password" placeholder="Senha">
+            <button onclick="login()">Entrar</button>
+            <p id="message"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Receitas Deliciosas. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function login() {
+            // Usuário e senha pré-definidos
+            const user = "wendrielylinda";
+            const pass = "1234";
+
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            const message = document.getElementById("message");
+
+            if (username === user && password === pass) {
+                message.style.color = "green";
+                message.innerText = "Login bem-sucedido!";
+                setTimeout(() => {
+                    window.location.href = 'inicial.html'; 
+                }, 1500);
+            } else {
+                message.style.color = "red";
+                message.innerText = "Usuário ou senha incorretos!";
+            }
+        }
+    </script>
+</body>
+</html>
