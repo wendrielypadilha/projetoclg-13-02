@@ -126,3 +126,27 @@ nav ul li button:focus {
     outline: none;
 }
 
+/*imagens la em baixo/**/
+.social-links {
+    display: flex;
+    justify-content: center; 
+    gap: 15px; 
+    margin-top: 20px; 
+}
+
+.social-links a {
+    display: inline-block;
+    text-decoration: none; 
+}
+
+
+.social-links img {
+    transition: transform 0.3s ease, filter 0.3s ease; 
+}
+
+
+.social-links a:hover img {
+    transform: scale(1.1); 
+    filter: brightness(1.2); 
+}
+
